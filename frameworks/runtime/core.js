@@ -995,7 +995,7 @@ SC.mixin(Function.prototype,
 
 });
 
-SC.String = {
+SC.CoreString = {
   fmt: function(str, formats) {
     // first, replace any ORDERED replacements.
     var idx  = 0; // the current index for non-numerical replacements
@@ -1048,7 +1048,7 @@ SC.mixin(String.prototype,
     @returns {String} formatted string
   */
   fmt: function() {
-    return SC.String.fmt(this, arguments);
+    return SC.CoreString.fmt(this, arguments);
   },
 
   /**
@@ -1061,7 +1061,7 @@ SC.mixin(String.prototype,
     @returns {String} the localized and formatted string.
   */
   loc: function() {
-    return SC.String.loc(this, arguments);
+    return SC.CoreString.loc(this, arguments);
   },
 
 
@@ -1073,7 +1073,7 @@ SC.mixin(String.prototype,
     @returns {Array} an array of non-empty strings
   */
   w: function() {
-    return SC.String.w(this);
+    return SC.CoreString.w(this);
   }
 });
 
